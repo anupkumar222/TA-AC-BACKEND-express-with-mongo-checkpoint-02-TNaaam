@@ -1,0 +1,82 @@
+<% include partials/header %>
+<div class="container space">
+  <h2 class="txt-center">Events</h2>
+  <p>
+    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde sunt id
+    earum! Consequatur sint quo illum assumenda, quia saepe sit corporis,
+    obcaecati exercitationem omnis quibusdam fugit non, minus deleniti animi.
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat harum
+    repellendus eaque architecto esse accusamus quam ipsam sint magnam ab,
+    dignissimos praesentium. Nobis incidunt accusantium reiciendis ratione quam
+    doloribus iure?
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus esse
+    deserunt quaerat? Veritatis rerum debitis, libero recusandae fuga ad porro
+    dolorum, maiores placeat provident doloremque quidem veniam repellat. Odio,
+    officiis. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi
+    itaque, ipsum esse tempora officia veritatis quidem deleniti delectus
+    maiores vitae sint consectetur voluptate tenetur commodi sequi quia
+    quibusdam blanditiis amet? Lorem ipsum dolor sit amet consectetur,
+    adipisicing elit. Repellendus, maxime? Inventore repudiandae minus beatae
+    aliquid maiores laborum dicta sequi, delectus dolores architecto fuga
+    debitis? At quisquam possimus repellendus? Facilis, corporis!
+  </p>
+  <div class="flex jc-between ai-start">
+    <div class="flex-60">
+      <div class="flex jc-between">
+        <h3>List of Events</h3>
+        <div class="dropdown">
+          <button class="dropbtn">Category</button>
+          <div class="dropdown-content">
+            <a href="/events">All</a>
+            <% allEvent.forEach(event => { %>
+            <a href="?sortBy=category&value=<%=event.category%>"><%= event.category %></a>
+            <% }) %>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn">Location</button>
+          <div class="dropdown-content">
+            <a href="/events">All</a>
+            <% allEvent.forEach(event => { %>
+            <a href="?sortBy=location&value=<%=event.location%>"><%= event.location %></a>
+            <% }) %>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn">
+            <a href="?sortBy=date">Sort By Date</a>
+          </button>
+        </div>
+      </div>
+      
+      <% events.forEach(event => { %>
+      <section class="ent-lst">
+        <h2><%= event.title %></h2>
+        <div class="flex jc-between">
+          <p><%= event.summary.substr(0, 80) + "..." %></p>
+          <a href="/events/<%= event._id %>">
+            <button class="btn">Show</button>
+          </a>
+        </div>
+      </section>
+      <% }) %>
+    </div>
+    <div class="flex-30">
+      <form action="/events" method="post">
+        <h3 class="txt-center">Add Event Details</h3>
+        <input type="text" name="title" placeholder="Enter Title" />
+        <textarea name="summary" rows="4" placeholder="Summary"></textarea>
+        <input type="text" name="host" placeholder="Enter Host" />
+        <input type="date" name="start_date" placeholder="Start Date" />
+        <input type="date" name="end_date" placeholder="End Date" />
+        <input type="text" name="category" placeholder="Event Category" />
+        <input type="text" name="location" placeholder="Location" />
+        <input type="number" name="likes" placeholder="Likes" />
+        <button>Submit Details</button>
+      </form>
+    </div>
+  </div>
+</div>
+<% include partials/footer %>

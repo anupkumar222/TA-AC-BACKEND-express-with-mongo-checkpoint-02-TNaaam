@@ -1,0 +1,66 @@
+<% include partials/header %>
+<div class="container space">
+  <h2 class="txt-center">ABOUT</h2>
+  <div class="flex jc-between ai-start">
+    <div class="flex-60">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi
+        aliquam animi neque omnis quia nihil mollitia optio velit. Ex earum
+        quaerat distinctio aspernatur consequatur vel aut repellendus, odit
+        placeat voluptatem! Lorem ipsum dolor sit amet consectetur adipisicing
+        elit. Unde quidem ut minus quis dolorem temporibus, eligendi est aperiam
+        asperiores accusantium provident sit aliquam obcaecati! Explicabo nulla
+        eaque enim nostrum quod. Lorem ipsum dolor sit amet, consectetur
+        adipisicing elit. Obcaecati quisquam sit quo, alias et earum commodi,
+        quidem reiciendis asperiores illo sequi, saepe molestias vitae labore
+        quod corporis. Veniam, tenetur consequatur?
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis,
+        corrupti quidem, in eius, a rem eveniet hic animi numquam quam harum.
+        Itaque optio nulla placeat consequuntur sint fugiat quibusdam quam!
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellat
+        voluptatibus nisi ea ratione voluptatum perspiciatis, est architecto!
+        Non corporis laboriosam, ullam, quasi delectus tempora voluptatibus illo
+        cumque consectetur aspernatur aliquam. Lorem ipsum dolor sit amet
+        consectetur, adipisicing elit. Adipisci commodi odio repudiandae
+        laudantium dolorem impedit modi soluta doloremque? Nobis a ut
+        repudiandae nisi vitae! Fugiat, veniam! Magnam minima modi quam. Lorem
+        ipsum dolor sit amet consectetur, adipisicing elit. Quaerat, cupiditate.
+        Accusamus soluta ducimus eius omnis nobis quae suscipit sapiente in,
+        error delectus ea veritatis, consectetur cum cupiditate eligendi
+        provident explicabo.
+      </p>
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis quae,
+        cumque ipsum commodi repellat nam nisi modi molestias harum quas, error,
+        magni odit natus vero consectetur ipsa nihil velit? Numquam! Lorem ipsum
+        dolor sit amet consectetur, adipisicing elit. Suscipit, nemo quaerat!
+        Sunt explicabo ipsa deserunt corrupti amet incidunt accusamus laborum
+        corporis ex nihil. Dolorum repudiandae nesciunt officia exercitationem
+        accusamus ipsa. Lorem ipsum dolor sit amet consectetur, adipisicing
+        elit. Quo exercitationem sunt hic laborum ad magni accusamus dolore
+        necessitatibus soluta voluptas culpa, doloribus accusantium tenetur
+        officiis placeat consequatur ratione! Quas, sapiente. Lorem ipsum dolor
+        sit amet consectetur adipisicing elit. Veritatis corporis, alias
+        blanditiis eveniet, distinctio, nisi hic id facere cumque et repellat
+        itaque delectus rerum mollitia soluta necessitatibus quo odio ipsam.
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti quae
+        nisi perferendis rem eius. Maxime excepturi odit repellendus
+        perspiciatis accusantium, repellat illo quo exercitationem, voluptates
+        natus vero nisi rem minima? Lorem, ipsum dolor sit amet consectetur
+        adipisicing elit. Impedit aspernatur facilis aliquid ratione, voluptatem
+        necessitatibus harum quaerat beatae, dolore dolorem consectetur nobis,
+        cupiditate fugiat esse molestiae et enim odit repudiandae.
+      </p>
+    </div>
+    <aside class="flex-30">
+      <img src="/images/about/upcoming.jpg" alt="Upcoming Event" />
+      <% events.forEach(event => { %>
+      <h2><%= event.title %></h2>
+      <% }) %>
+    </aside>
+  </div>
+</div>
+
+<% include partials/footer %>

@@ -1,0 +1,63 @@
+<% include partials/header %>
+
+<div class="container space flex">
+  <form
+    class="edit-form flex-60"
+    action="/events/<%= event.id %>"
+    method="post"
+  >
+    <h2>Update Event Detail</h2>
+    <input
+      type="text"
+      name="title"
+      placeholder="Enter Title"
+      value="<%= event.title %>"
+    />
+    <textarea name="summary" rows="4" placeholder="Summary">
+      <%= event.summary %></textarea
+    >
+    <input
+      type="text"
+      name="host"
+      placeholder="Enter Host"
+      value="<%= event.host %>"
+    />
+    <input
+      type="date"
+      name="start_date"
+      placeholder="Start Date"
+      value="<%= event.start_date %>"
+    />
+    <input
+      type="date"
+      name="end_date"
+      placeholder="End Date"
+      value="<%= event.end_date %>"
+    />
+    <input
+      type="text"
+      name="category"
+      placeholder="Event Category"
+      value="<%= event.category %>"
+    />
+    <input
+      type="text"
+      name="location"
+      placeholder="Location"
+      value="<%= event.location %>"
+    />
+    <input
+      type="number"
+      name="likes"
+      placeholder="Likes"
+      value="<%= event.likes %>"
+    />
+    <button type="submit">Update article</button>
+  </form>
+  <div class="flex-30">
+    <img class="gallery-img" src="/images/gallery/14.jpg" alt="Image" />
+    <img class="gallery-img" src="/images/gallery/10.jpg" alt="Image" />
+  </div>
+</div>
+
+<% include partials/footer %>

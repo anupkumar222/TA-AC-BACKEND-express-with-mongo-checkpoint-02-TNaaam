@@ -1,0 +1,25 @@
+<% include partials/header %>
+<div class="contaier space">
+  <form class="edit-form" action="/remarks/<%= remark.id%>" method="post">
+    <h2>Update Remarks</h2>
+    <textarea name="remark" rows="6" placeholder="Update Remark">
+            <%= remark.remark %>
+        </textarea
+    >
+    <input
+      type="text"
+      name="author"
+      placeholder="Author"
+      value="<%= remark.author %>"
+    />
+    <input
+      type="number"
+      name="likes"
+      placeholder="Likes"
+      value="<%= remark.likes %>"
+    />
+    <button class="btn">Update Remark</button>
+  </form>
+</div>
+
+<% include partials/footer %>
